@@ -1,6 +1,6 @@
 # Cuffless Blood Pressure Estimation from PPG
 
-This repository contains the code I used for my final-year dissertation project on cuffless blood pressure estimation from PPG signals.
+This repository contains the main code used for my final-year dissertation project on cuffless blood pressure estimation from PPG signals.
 
 The main model is a Siamese neural network. It compares a patient-specific anchor PPG window with a current PPG window, then predicts the change in systolic and diastolic blood pressure. The final system uses PPG-derived waveform channels, spectrogram features, handcrafted beat features, post-hoc calibration, and ensemble averaging.
 
@@ -12,9 +12,9 @@ Access to MIMIC-II must be obtained separately through PhysioNet. After preproce
 
 This repository is mainly for showing the code used in the project, not for distributing the dataset.
 
-## Main files
+## Repository contents
 
-These are the files I used most in the final pipeline:
+The repository is kept deliberately small. It contains the scripts needed to show the final reported pipeline and the main comparison experiments.
 
 - `preprocess_mimic2_v4.py`  
   Builds the cleaned PPG-only dataset used for the final v11 experiments.
@@ -52,15 +52,12 @@ These are the files I used most in the final pipeline:
 - `app.py`  
   Streamlit dashboard for the real-time visualisation demo.
 
-There are also older experiment scripts in the repository. I kept them because they show the development process, but the files above are the main ones for the final reported pipeline.
-
 ## Why there are multiple preprocessing scripts
 
-The preprocessing scripts are separate because they were used for different experiments:
+There are two preprocessing scripts because they were used for different reported experiments:
 
 - `preprocess_mimic2_v4.py` is the final PPG-only preprocessing script. This is the one used for the main v11 result in the dissertation.
 - `preprocess_mimic2_ecgppg.py` is separate because the ECG+PPG experiment needed a different input setup with ECG as an extra channel.
-- `preprocess_mimic2_v2.py` and `preprocess_mimic2_v3.py` are older development versions. They are kept as legacy files to show the experimentation path, but they are not the final reported pipeline.
 
 I kept the ECG+PPG preprocessing separate rather than merging it into the PPG-only script because the final PPG result and the ECG+PPG negative result were evaluated as different dataset variants.
 
@@ -165,4 +162,4 @@ This keeps the repository small and avoids redistributing restricted data.
 
 ## Notes
 
-This code was written as a dissertation research project rather than a polished software package. Some older files are kept because they show the path of experimentation. The final reported results are based on the cleaned v11 PPG-only pipeline, the three-seed ensemble, and the separately reported personalised calibration extension.
+This code was written as a dissertation research project rather than a polished software package. The final reported results are based on the cleaned v11 PPG-only pipeline, the three-seed ensemble, and the separately reported personalised calibration extension.
