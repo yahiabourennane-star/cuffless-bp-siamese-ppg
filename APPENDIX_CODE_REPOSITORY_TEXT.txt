@@ -1,3 +1,0 @@
-Supplementary Code Repository A2. The Python code used for preprocessing, model training, evaluation, figure generation, and the Streamlit visualisation demo is available at: [insert GitHub link].
-
-The MIMIC-II waveform data, processed NumPy arrays, cached features, and trained checkpoints are not included because of dataset access restrictions and file-size limits. The repository contains the main scripts used in the project and a README explaining the code structure and expected local data folders.
