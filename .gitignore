@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Restricted / generated data
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.mat
+*.csv
+*.tsv
+*.pkl
+*.pickle
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+checkpoints*/
+checkpoints_*/
+ensemble*/
+ensemble_*/
+patient_adapt*/
+patient_adapt_*/
+
+# MIMIC / processed data folders
+MIMIC2_out*/
+MIMIC*/
+data/
+cache/
+
+# Logs and temporary outputs
+*.log
+*.err
+*.partial
+logs/
+outputs/
+gap_experiment*/
+
+# Dissertation drafts and rendered review artifacts
+*.docx
+*.pdf
+*.zip
+docx_review*/
+docx_render*/
+_doc_review*
+_dissertation*
+
+# Generated figures/screenshots
+*.png
+*.jpg
+*.jpeg
+*.gif
+dissertation_figures*/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
