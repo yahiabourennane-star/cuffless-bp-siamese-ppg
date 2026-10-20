@@ -65,6 +65,11 @@ _dissertation*
 *.gif
 dissertation_figures*/
 
+# ...but keep the README figures
+!docs/
+!docs/figures/
+!docs/figures/*.png
+
 # OS/editor files
 .DS_Store
 Thumbs.db
